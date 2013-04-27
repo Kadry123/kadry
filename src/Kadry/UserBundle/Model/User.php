@@ -7,8 +7,11 @@ use Doctrine\ORM\Mapping as ORM;
 
 class User extends BaseUser
 {
+
     protected $id;
 
+    protected $groups;
+    
     public function __construct()
     {
         parent::__construct();

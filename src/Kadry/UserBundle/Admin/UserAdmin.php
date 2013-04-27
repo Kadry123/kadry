@@ -9,21 +9,16 @@ use Sonata\AdminBundle\Form\FormMapper;
 
 class UserAdmin extends Admin
 {
-//    protected function configureFormFields(FormMapper $formMapper)
-//    {
-//        $formMapper
-//            ->add('name')
-//            ->add('enabled', null, array('required' => false))
-//        ;
-//    }
-//
-//    protected function configureDatagridFilters(DatagridMapper $datagridMapper)
-//    {
-//        $datagridMapper
-//            ->add('name')
-//            ->add('posts')
-//        ;
-//    }
+    protected function configureFormFields(FormMapper $formMapper)
+    {
+        $formMapper
+            ->add('username')
+            ->add('email')
+            ->add('password')
+            ->add('enabled', null, array('required' => false))
+            ->add('groups')
+        ;
+    }
 
     protected function configureListFields(ListMapper $listMapper)
     {

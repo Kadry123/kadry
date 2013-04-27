@@ -1,0 +1,16 @@
+<?php
+
+namespace Kadry\UserBundle\Entity;
+
+use Kadry\UserBundle\Model\Group as ModelGroup;
+
+/**
+ * Description of Group
+ *
+ * @author Kamil
+ */
+class Group extends ModelGroup {
+    //put your code here
+}
+
+?>

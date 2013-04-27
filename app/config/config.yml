@@ -68,6 +68,8 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Kadry\UserBundle\Entity\User
+    group:
+        group_class: Kadry\UserBundle\Entity\Group
 
 sonata_block:
     default_contexts: [cms]

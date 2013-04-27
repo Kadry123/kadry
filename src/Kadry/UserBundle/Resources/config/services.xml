@@ -6,10 +6,17 @@
 
     <services>
         <service id="admin.user" class="Kadry\UserBundle\Admin\UserAdmin">
-          <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Pracownicy"/>
-          <argument />
-          <argument>Kadry\UserBundle\Entity\User</argument>
-          <argument>SonataAdminBundle:CRUD</argument>
-      </service>
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Pracownicy"/>
+            <argument />
+            <argument>Kadry\UserBundle\Entity\User</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        
+        <service id="admin.group" class="Kadry\UserBundle\Admin\GroupAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Grupy"/>
+            <argument />
+            <argument>Kadry\UserBundle\Entity\Group</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
     </services>
 </container>
