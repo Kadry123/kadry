@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="admin.user" class="Kadry\UserBundle\Admin\UserAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Pracownicy"/>
+            <argument />
+            <argument>Kadry\UserBundle\Entity\User</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        
+        <service id="admin.group" class="Kadry\UserBundle\Admin\GroupAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Grupy"/>
+            <argument />
+            <argument>Kadry\UserBundle\Entity\Group</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        
+        <service id="admin.document" class="Kadry\UserBundle\Admin\DocumentAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Dokumenty" label="Dokumenty"/>
+            <argument />
+            <argument>Kadry\UserBundle\Entity\Document</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        
+        <service id="admin.employment.history" class="Kadry\UserBundle\Admin\EmploymentHistoryAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Doswiadczenie" label="Doswiadczenie"/>
+            <argument />
+            <argument>Kadry\UserBundle\Entity\EmploymentHistory</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+    </services>
+</container>

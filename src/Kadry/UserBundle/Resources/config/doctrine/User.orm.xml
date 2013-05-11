@@ -4,7 +4,14 @@
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
-    
+        <field name="firstName" type="string" column="first_name"/>
+        <field name="lastName" type="string" column="last_name"/>
+        <field name="address" type="string" column="address"/>
+        <field name="birthdayDate" type="date" column="birthday_date"/>
+        <field name="leaveLength" type="integer" column="leave_length"/>
+        <field name="status" type="smallint" column="status"/>
+        <field name="startDate" type="date" column="start_date"/>
+                
         <many-to-many field="groups" target-entity="Group">
             <join-table name="users_groups">
                 <join-columns>
@@ -15,5 +22,11 @@
                 </inverse-join-columns>
             </join-table>
         </many-to-many>
+        
+        <one-to-many field="employmentHistory" target-entity="EmploymentHistory" mapped-by="user">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-many>
     </entity>
 </doctrine-mapping>
