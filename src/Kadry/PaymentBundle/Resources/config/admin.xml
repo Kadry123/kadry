@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="admin.contract" class="Kadry\PaymentBundle\Admin\ContractAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Umowy"/>
+            <argument />
+            <argument>Kadry\PaymentBundle\Entity\Contract</argument>
+            <argument>KadryPaymentBundle:AdminContract</argument>
+        </service>
+    </services>
+</container>

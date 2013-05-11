@@ -28,5 +28,9 @@
                 <cascade-all />
             </cascade>
         </one-to-many>
+        
+        <one-to-one field="contract" target-entity="Kadry\PaymentBundle\Entity\Contract" inversed-by="user">
+            <join-column name="contract_id" referenced-column-name="id" />
+        </one-to-one>
     </entity>
 </doctrine-mapping>

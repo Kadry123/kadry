@@ -1,3 +1,7 @@
+kadry_payment:
+    resource: "@KadryPaymentBundle/Resources/config/routing.xml"
+    prefix:   /
+
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
     prefix: /admin

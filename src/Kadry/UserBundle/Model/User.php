@@ -43,6 +43,8 @@ class User extends BaseUser
     
     protected $employmentHistory;
     
+    protected $contract;
+    
     public function __construct()
     {
         parent::__construct();
@@ -117,5 +119,13 @@ class User extends BaseUser
     
     public function removeEmploymentHistory(EmploymentHistory $employmentHistory){
         $this->employmentHistory->removeElement($employmentHistory);
+    }
+    
+    public function getContract() {
+        return $this->contract;
+    }
+
+    public function setContract($contract) {
+        $this->contract = $contract;
     }
 }
