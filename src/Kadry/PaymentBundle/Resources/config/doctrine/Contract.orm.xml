@@ -27,13 +27,13 @@
         <field name="pwss" type="float" column="pwss" nullable="true" />
         
         <!--Składki na ubezpieczenia społeczne finansowane przez pracownika-->
-        <field name="uEmerytalne" type="float" column="u_emerytalne" nullable="true" />
+        <!--<field name="uEmerytalne" type="float" column="u_emerytalne" nullable="true" />-->
         <field name="uEmerytalnePercent" type="float" column="u_emerytalne_percent" nullable="true" />
         
-        <field name="uRentowe" type="float" column="u_rentowe" nullable="true" />
+        <!--<field name="uRentowe" type="float" column="u_rentowe" nullable="true" />-->
         <field name="uRentowePercent" type="float" column="u_rentowe_percent" nullable="true" />
         
-        <field name="uChorobowe" type="float" column="u_chorobowe" nullable="true" />
+        <!--<field name="uChorobowe" type="float" column="u_chorobowe" nullable="true" />-->
         <field name="uChorobowePercent" type="float" column="u_chorobowe_percent" nullable="true" />
         
 <!--        Podstawa wymiaru składki zdrowotnej

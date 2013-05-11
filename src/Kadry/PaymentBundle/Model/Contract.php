@@ -77,27 +77,12 @@ class Contract{
     /**
      * @var float
      */
-    protected $uEmerytalne;
-
-    /**
-     * @var float
-     */
     protected $uEmerytalnePercent;
 
     /**
      * @var float
      */
-    protected $uRentowe;
-
-    /**
-     * @var float
-     */
     protected $uRentowePercent;
-
-    /**
-     * @var float
-     */
-    protected $uChorobowe;
 
     /**
      * @var float
@@ -455,29 +440,6 @@ class Contract{
     }
 
     /**
-     * Set uEmerytalne
-     *
-     * @param float $uEmerytalne
-     * @return Contract
-     */
-    public function setUEmerytalne($uEmerytalne)
-    {
-        $this->uEmerytalne = $uEmerytalne;
-    
-        return $this;
-    }
-
-    /**
-     * Get uEmerytalne
-     *
-     * @return float 
-     */
-    public function getUEmerytalne()
-    {
-        return $this->uEmerytalne;
-    }
-
-    /**
      * Set uEmerytalnePercent
      *
      * @param float $uEmerytalnePercent
@@ -501,29 +463,6 @@ class Contract{
     }
 
     /**
-     * Set uRentowe
-     *
-     * @param float $uRentowe
-     * @return Contract
-     */
-    public function setURentowe($uRentowe)
-    {
-        $this->uRentowe = $uRentowe;
-    
-        return $this;
-    }
-
-    /**
-     * Get uRentowe
-     *
-     * @return float 
-     */
-    public function getURentowe()
-    {
-        return $this->uRentowe;
-    }
-
-    /**
      * Set uRentowePercent
      *
      * @param float $uRentowePercent
@@ -544,29 +483,6 @@ class Contract{
     public function getURentowePercent()
     {
         return $this->uRentowePercent;
-    }
-
-    /**
-     * Set uChorobowe
-     *
-     * @param float $uChorobowe
-     * @return Contract
-     */
-    public function setUChorobowe($uChorobowe)
-    {
-        $this->uChorobowe = $uChorobowe;
-    
-        return $this;
-    }
-
-    /**
-     * Get uChorobowe
-     *
-     * @return float 
-     */
-    public function getUChorobowe()
-    {
-        return $this->uChorobowe;
     }
 
     /**

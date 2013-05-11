@@ -12,3 +12,20 @@ parameters:
     locale: pl
     secret: 6fb02de5d84e8fc1ffb7f49b952e398e5787f891
     database_path: null
+
+
+    #składki %
+    s_emerytalna: 0.0976
+    s_rentowa: 0.015
+    s_chorobowa: 0.0245
+    
+    s_ubez_zdro_1 : 0.09
+    s_ubez_zdro_2 : 0.0775
+    
+    
+    granica_podatkowa: 85528
+    podatek_dochodowy_1 : 0.18
+    podatek_dochodowy_2 : 0.32
+    podatek_dochodowy_2_plus : 14839.02
+    
+    max_kwota_wymiaru_skladek_spolecznych:  105780
