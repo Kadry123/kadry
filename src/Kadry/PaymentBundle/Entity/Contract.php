@@ -18,34 +18,4 @@ class Contract extends ModelContract{
     {
         return (string)$this->typ;
     }
-    
-    protected $uEmerytalne;
-    protected $uRentowe;
-    protected $uChorobowe;    
-    
-    public function getUEmerytalne() {
-        return $this->uEmerytalne;
-    }
-
-    public function setUEmerytalne($uEmerytalne) {
-        $this->uEmerytalne = $uEmerytalne;
-    }
-
-    public function getURentowe() {
-        return $this->uRentowe;
-    }
-
-    public function setURentowe($uRentowe) {
-        $this->uRentowe = $uRentowe;
-    }
-
-    public function getUChorobowe() {
-        return $this->uChorobowe;
-    }
-
-    public function setUChorobowe($uChorobowe) {
-        $this->uChorobowe = $uChorobowe;
-    }
-
-
 }

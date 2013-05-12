@@ -12,5 +12,11 @@
             <argument>Kadry\PaymentBundle\Entity\Contract</argument>
             <argument>KadryPaymentBundle:AdminContract</argument>
         </service>
+        <service id="admin.payment" class="Kadry\PaymentBundle\Admin\PaymentAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Wypłaty"/>
+            <argument />
+            <argument>Kadry\PaymentBundle\Entity\Payment</argument>
+            <argument>KadryPaymentBundle:AdminPayment</argument>
+        </service>
     </services>
 </container>

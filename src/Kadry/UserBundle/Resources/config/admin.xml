@@ -9,7 +9,7 @@
             <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Pracownicy"/>
             <argument />
             <argument>Kadry\UserBundle\Entity\User</argument>
-            <argument>SonataAdminBundle:CRUD</argument>
+            <argument>KadryUserBundle:AdminUser</argument>
         </service>
         
         <service id="admin.group" class="Kadry\UserBundle\Admin\GroupAdmin">

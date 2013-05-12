@@ -7,5 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 class User extends ModelUser
 {
-
+    public function __toString() {
+        return $this->getFirstName() . ' ' . $this->getLastName();
+    }
 }

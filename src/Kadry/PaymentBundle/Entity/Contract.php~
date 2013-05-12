@@ -10,4 +10,12 @@ use Kadry\PaymentBundle\Model\Contract as ModelContract;
  */
 class Contract extends ModelContract{
 
+    const UMOWA_O_PRACE = "Umowa o pracę";
+    const UMOWA_O_DZIELO = "Umowa o dzieło";
+    const UMOWA_ZLECENIE = "Umowa zlecenie";
+    
+    public function __toString()
+    {
+        return (string)$this->typ;
+    }
 }

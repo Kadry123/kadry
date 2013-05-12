@@ -45,6 +45,8 @@ class User extends BaseUser
     
     protected $contract;
     
+    protected $payment;    
+    
     public function __construct()
     {
         parent::__construct();
@@ -127,5 +129,13 @@ class User extends BaseUser
 
     public function setContract($contract) {
         $this->contract = $contract;
+    }
+    
+    public function getPayment() {
+        return $this->payment;
+    }
+
+    public function setPayment($payment) {
+        $this->payment = $payment;
     }
 }

@@ -22,10 +22,18 @@ parameters:
     s_ubez_zdro_1 : 0.09
     s_ubez_zdro_2 : 0.0775
     
-    
-    granica_podatkowa: 85528
     podatek_dochodowy_1 : 0.18
-    podatek_dochodowy_2 : 0.32
-    podatek_dochodowy_2_plus : 14839.02
+    
+    koszt_uzyskania_przychodu: 111.25
+    ulga_podatkowa: 46.33
+    
+    ps_emerytalna: 0.0976
+    ps_rentowa: 0.065
+    ps_wypadkowe: 0.0193
+    ps_fundusz_pracy: 0.0245
+    ps_fgsp: 0.001
+#    granica_podatkowa: 85528
+#    podatek_dochodowy_2 : 0.32
+#    podatek_dochodowy_2_plus : 14839.02
     
     max_kwota_wymiaru_skladek_spolecznych:  105780
