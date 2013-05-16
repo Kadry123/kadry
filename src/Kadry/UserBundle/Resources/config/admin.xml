@@ -32,5 +32,12 @@
             <argument>Kadry\UserBundle\Entity\EmploymentHistory</argument>
             <argument>SonataAdminBundle:CRUD</argument>
         </service>
+        
+        <service id="admin.education" class="Kadry\UserBundle\Admin\EducationAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Edukacja" label="Edukacja"/>
+            <argument />
+            <argument>Kadry\UserBundle\Entity\Education</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
     </services>
 </container>

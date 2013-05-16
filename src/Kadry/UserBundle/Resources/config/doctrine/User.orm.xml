@@ -28,5 +28,12 @@
                 <cascade-all />
             </cascade>
         </one-to-many>
+        
+        <one-to-many field="employeesHasEducation" target-entity="EmployeesHasEducation" mapped-by="user">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-many>
+        
     </entity>
 </doctrine-mapping>

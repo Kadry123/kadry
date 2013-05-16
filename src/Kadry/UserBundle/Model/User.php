@@ -43,11 +43,14 @@ class User extends BaseUser
     
     protected $employmentHistory;
     
+    protected $employeesHasEducation;
+    
     public function __construct()
     {
         parent::__construct();
         $this->startDate = new \DateTime();
         $this->employmentHistory = new ArrayCollection();
+        $this->employeesHasEducation = new ArrayCollection();
     }
     
     public function getFirstName() {
@@ -117,5 +120,30 @@ class User extends BaseUser
     
     public function removeEmploymentHistory(EmploymentHistory $employmentHistory){
         $this->employmentHistory->removeElement($employmentHistory);
+    }
+
+    public function addEmployeesHasEducation(\Kadry\UserBundle\Entity\EmployeesHasEducation $employeesHasEducation)
+    {
+        $this->employeesHasEducation[] = $employeesHasEducation;
+    
+        return $this;
+    }
+
+    public function removeEmployeesHasEducation(\Kadry\UserBundle\Entity\EmployeesHasEducation $employeesHasEducation)
+    {
+        $this->employeesHasEducation->removeElement($employeesHasEducation);
+    }
+
+    public function getEmployeesHasEducation()
+    {
+        return $this->employeesHasEducation;
+    }
+
+    public function setEmployeesHasEducation($employeesHasEducation)
+    {
+        $this->employeesHasEducation = $employeesHasEducation;
+        foreach($employeesHasEducation as $education){
+            $education->setUser($this);
+        }
     }
 }
