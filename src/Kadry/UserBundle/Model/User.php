@@ -45,6 +45,8 @@ class User extends BaseUser
     
     protected $employeesHasEducation;
     
+    protected $contract;
+    
     public function __construct()
     {
         parent::__construct();
@@ -145,5 +147,13 @@ class User extends BaseUser
         foreach($employeesHasEducation as $education){
             $education->setUser($this);
         }
+    }
+    
+    public function getContract() {
+        return $this->contract;
+    }
+
+    public function setContract($contract) {
+        $this->contract = $contract;
     }
 }

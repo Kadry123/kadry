@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Kadry\PaymentBundle\Entity\Contract" table="contract">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+         <!--Wynagrodzenia objęte składkami na ubezpieczenia społeczne-->
+        <field name="typ" type="string" length="128" column="typ" nullable="false" />
+        
+        <field name="placaZasadnicza" type="float" column="placa_zasadnicza" nullable="false" />
+        <field name="staleDodatki" type="float" column="stale_dodatki" nullable="true" />
+        <field name="premia" type="float" column="premia" nullable="true" />
+        <field name="prowizja" type="float" column="prowizja" nullable="true" />
+        <field name="akord" type="float" column="akord" nullable="true" />
+        <field name="inne" type="float" column="inne" nullable="true" />
+        
+        <!--Wynagrodzenia nieskładkowe-->
+        <field name="zaCzasChoroby" type="float" column="za_czas_choroby" nullable="true" />
+        <field name="inneNs" type="float" column="inne_ns" nullable="true" />
+        
+        <!--Zasiłki--> 
+        <field name="zChorobowy" type="float" column="z_chorobowy" nullable="true" />
+        <field name="zOpiekunczy" type="float" column="z_opiekunczy" nullable="true" />
+        <field name="zMacierzynski" type="float" column="z_macierzynski" nullable="true" />
+        
+        <!--Podstawa wymiaru składek społecznych--> 
+        <field name="pwss" type="float" column="pwss" nullable="true" />
+        
+        <!--Składki na ubezpieczenia społeczne finansowane przez pracownika-->
+        <!--<field name="uEmerytalne" type="float" column="u_emerytalne" nullable="true" />-->
+        <field name="uEmerytalnePercent" type="float" column="u_emerytalne_percent" nullable="true" />
+        
+        <!--<field name="uRentowe" type="float" column="u_rentowe" nullable="true" />-->
+        <field name="uRentowePercent" type="float" column="u_rentowe_percent" nullable="true" />
+        
+        <!--<field name="uChorobowe" type="float" column="u_chorobowe" nullable="true" />-->
+        <field name="uChorobowePercent" type="float" column="u_chorobowe_percent" nullable="true" />
+        
+<!--        Podstawa wymiaru składki zdrowotnej
+        <field type="float" column="pwsz" nullable="true" />-->
+        
+        <!--Składka na ubezpieczenie zdrowotne 9%-->
+        <field name="snuz1" type="float" column="snuz_1" nullable="true" />
+        
+        <!--Składka na ubezpieczenie zdrowotne 7,75%-->
+        <field name="snuz2" type="float" column="snuz_2" nullable="true" />
+        
+        <!--Koszty uzyskania przychodów-->
+        <field name="kosztUzyskaniaPrzychodu" type="float" column="koszt_uzyskania_przychodu" nullable="true" />
+        
+        <!--Stopa procentowa podatku-->
+        <field name="stopaProcentowaPodatku" type="float" column="stopa_procentowa_podatku" nullable="true" />
+        
+        <!--Ulga podatkowa-->
+        <field name="ulgaPodatkowa" type="float" column="ulga_podatkowa" nullable="true" />
+        
+        <!--Inne potrącenia-->
+        <field name="ubezpieczenieGrupowe" type="float" column="ubezpieczenie_grupowe" nullable="true" />
+        <field name="kzp" type="float" column="kzp" nullable="true" />
+        <field name="komornik" type="float" column="komornik" nullable="true" />
+        
+        <one-to-one field="user" target-entity="Kadry\UserBundle\Entity\User" mapped-by="contract" />
+    </entity>
+</doctrine-mapping>

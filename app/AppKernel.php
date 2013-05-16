@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Kadry\UserBundle\KadryUserBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Kadry\PaymentBundle\KadryPaymentBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
