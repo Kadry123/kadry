@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Kadry\PaymentBundle\Entity\Payment" table="payment">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="typ" type="string" length="128" column="typ" nullable="false" />
+        <field name="brutto" type="float" column="brutto" nullable="true" />
+
+        <field name="uEmerytalne" type="float" column="u_emerytalne" nullable="true" />
+        <field name="uRentowe" type="float" column="u_rentowe" nullable="true" />
+        <field name="uChorobowe" type="float" column="u_chorobowe" nullable="true" />
+        
+        <field name="kosztUzyskaniaPrzychodu" type="float" column="koszt_uzyskania_przychodu" nullable="true" />
+        <field name="podatekDochodowy" type="float" column="podatek_dochodowy" nullable="true" />
+        <field name="ulgaPodatkowa" type="float" column="ulga_podatkowa" nullable="true" />
+        <field name="ubezpieczenieZdrowotne" type="float" column="ubezpieczenie_zdrowotne" nullable="true" />
+        <field name="ubezpieczenieZdrowotne2" type="float" column="ubezpieczenie_zdrowotne_2" nullable="true" />
+        <field name="ewentualnePotracenia" type="float" column="ewentualne_potracenia" nullable="true" />
+        <field name="wyplataNetto" type="float" column="wyplata_netto" nullable="true" />
+        
+        <field name="puEmerytalne" type="float" column="pu_emerytalne" nullable="true" />
+        <field name="puRentowe" type="float" column="pu_rentowe" nullable="true" />
+        <field name="puWypadkowe" type="float" column="pu_wypadkowe" nullable="true" />
+        <field name="funduszPracy" type="float" column="fundusz_pracy" nullable="true" />
+        <field name="fgsp" type="float" column="fgsp" nullable="true" />
+        <field name="kosztPracodawcy" type="float" column="koszt_pracodawcy" nullable="true" />
+        
+        <field name="created" type="datetime" column="created" nullable="true" />
+              
+        <many-to-one field="user" target-entity="Kadry\UserBundle\Entity\User" inversed-by="payment">
+            <join-column name="user_id" referenced-column-name="id" />
+        </many-to-one>        
+        
+    </entity>
+</doctrine-mapping>

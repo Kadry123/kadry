@@ -8,5 +8,7 @@ use Symfony\Component\Validator\ExecutionContextInterface;
 
 class User extends ModelUser
 {
-
+    public function __toString() {
+        return $this->getFirstName() . ' ' . $this->getLastName();
+    }
 }
