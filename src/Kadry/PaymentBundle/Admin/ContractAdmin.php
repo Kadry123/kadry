@@ -23,10 +23,34 @@ class ContractAdmin extends Admin
         $formMapper
                 ->add('typ', 'choice', array(
                     'label' => 'Typ umowy',
-                    'choices' => $refl->getConstants()
+                    'choices' => $refl->getConstants(),
+                    'required' => true
                 ))
-                ->add('brutto')
-//                ->add('user')
+                ->add('kosztUzyskaniaPrzychodu', 'number', array(
+                    'label' => 'Koszt uzyskania przychodu',
+                    'required' => false
+                ))                
+                ->add('brutto', 'number', array(
+                    'label' => 'Kwota brutto',
+                    'required' => true
+                ))
+                ->setHelps(array(
+                    'kosztUzyskaniaPrzychodu' => 'Wartość procentowa(%) w przypadku umowy o dzieło i umowy zlecenie, wartość pieniężna w innym przypadku'
+                ))
+                ->with('Umowa zlecenie')
+                    ->add('zOdliczZus', null, array(
+                        'label' => 'Odlicz składkę zus',
+                        'required' => false
+                    ))
+                    ->add('zUZ', null, array(
+                        'label' => 'Ubezpieczenie zdrowotne',
+                        'required' => false
+                    ))
+                    ->add('zZZP', null, array(
+                        'label' => 'Zleceniobiorca jest pracownikiem zleceniodawcy',
+                        'required' => false
+                    ))
+                ->end()
         ;
     }
     

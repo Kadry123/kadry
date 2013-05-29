@@ -21,6 +21,7 @@ parameters:
     
     s_ubez_zdro_1 : 0.09
     s_ubez_zdro_2 : 0.0775
+    s_ubez_zdro_3 : 0.0125
     
     podatek_dochodowy_1 : 0.18
     

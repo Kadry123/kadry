@@ -10,9 +10,9 @@ use Kadry\PaymentBundle\Model\Contract as ModelContract;
  */
 class Contract extends ModelContract{
 
-    const UMOWA_O_PRACE = "Umowa o pracę";
-    const UMOWA_O_DZIELO = "Umowa o dzieło";
-    const UMOWA_ZLECENIE = "Umowa zlecenie";
+    const UMOWA_O_PRACE = "UMOWA_O_PRACE";
+    const UMOWA_O_DZIELO = "UMOWA_O_DZIELO";
+    const UMOWA_ZLECENIE = "UMOWA_ZLECENIE";
     
     public function __toString()
     {

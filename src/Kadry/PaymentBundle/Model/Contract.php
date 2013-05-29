@@ -107,4 +107,42 @@ class Contract{
     {
         return $this->user;
     }
+    
+    protected $kosztUzyskaniaPrzychodu;
+    
+    public function getKosztUzyskaniaPrzychodu() {
+        return $this->kosztUzyskaniaPrzychodu;
+    }
+
+    public function setKosztUzyskaniaPrzychodu($kosztUzyskaniaPrzychodu) {
+        $this->kosztUzyskaniaPrzychodu = $kosztUzyskaniaPrzychodu;
+    }
+
+    protected $zOdliczZus;
+    protected $zUZ;
+    protected $zZZP;
+    
+    public function getZOdliczZus() {
+        return $this->zOdliczZus;
+    }
+
+    public function setZOdliczZus($zOdliczZus) {
+        $this->zOdliczZus = $zOdliczZus;
+    }
+
+    public function getZUZ() {
+        return $this->zUZ;
+    }
+
+    public function setZUZ($zUZ) {
+        $this->zUZ = $zUZ;
+    }
+
+    public function getZZZP() {
+        return $this->zZZP;
+    }
+
+    public function setZZZP($zZZP) {
+        $this->zZZP = $zZZP;
+    }
 }

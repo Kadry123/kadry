@@ -7,6 +7,19 @@
         <field name="typ" type="string" length="128" column="typ" nullable="true" />
         <field name="brutto" type="float" column="brutto" nullable="true" />
         
+        <field name="kosztUzyskaniaPrzychodu" type="float" column="koszt_uzyskania_przychodu" nullable="true" />
+        
+        <!--Zlecenie-->
+        <!--Zlecenie-->
+        <!--Zlecenie-->
+        <field name="zOdliczZus" type="boolean" column="zlecenie_odlicz_zus" nullable="true" />
+        
+        <!--zUbezpieczenieZdrowotne-->
+        <field name="zUZ" type="boolean" column="z_u_z" nullable="true" />
+        
+        <!--zZleceniobiorcaPracownikiemZleceniodawcy-->
+        <field name="zZZP" type="boolean" column="z_z_z_p" nullable="true" />
+        
         <one-to-one field="user" target-entity="Kadry\UserBundle\Entity\User" mapped-by="contract" />
     </entity>
 </doctrine-mapping>

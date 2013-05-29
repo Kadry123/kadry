@@ -19,14 +19,15 @@ class PaymentAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-                ->add('kosztUzyskaniaPrzychodu', null, array(
-                    'label' => 'Koszt uzyskania przychodu'
-                ))
+//                ->add('kosztUzyskaniaPrzychodu', null, array(
+//                    'label' => 'Koszt uzyskania przychodu'
+//                ))
 //                ->add('ewentualnePotracenia', null, array(
 //                    'label' => 'ewentualne potrącenia'
 //                ))
                 ->add('created', null, array(
-                    'label' => 'Data wystawienia'
+                    'label' => 'Data wystawienia',
+                    'required' => true
                 ))
                 ->add('user', 'entity', array(
                         'class' => 'KadryUserBundle:User',
@@ -65,7 +66,7 @@ class PaymentAdmin extends Admin
                 'label' => 'Netto'
             ))
             ->add('kosztPracodawcy', null, array(
-                'label' => 'kosztPracodawcy'
+                'label' => 'Koszt Pracodawcy'
             ))
             ->add('created', null, array(
                 'label' => 'Data wystawienia'
