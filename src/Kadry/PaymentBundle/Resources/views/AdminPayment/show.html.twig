@@ -1,0 +1,140 @@
+{% extends 'SonataAdminBundle:CRUD:base_show.html.twig' %}
+{% block show %}
+    <div class="sonata-ba-view">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Pracownik</th>
+                    <td>{{ object.user.firstName ~ ' '~ object.user.lastName }}</td>
+                </tr>
+                <tr>
+                    <th>Dodano</th>
+                    <td>{{ object.created|date('Y-m-d H:i:s') }}</td>
+                </tr>
+                <tr>
+                    <th>Typ umowy</th>
+                    <td>{{ object.typ }}</td>
+                </tr>
+                <tr>
+                    <th>Kwota Brutto</th>
+                    <td>{{ object.brutto }} zł</td>
+                </tr>
+                <tr>
+                    <th>Kwota Netto</th>
+                    <td>{{ object.wyplataNetto }} zł</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>                
+                <tr>
+                    <td colspan="2" class="separator">Ubezpieczenia</td>
+                </tr>                
+                <tr>
+                    <th>Ubezpieczenie Emerytalne</th>
+                    <td>{{ object.uEmerytalne*100 }}</td>
+                </tr>
+                <tr>
+                    <th>Ubezpieczenie Rentowe</th>
+                    <td>{{ object.uRentowe*100 }}</td>
+                </tr>
+                <tr>
+                    <th>Ubezpieczenie Chorobowe</th>
+                    <td>{{ object.uChorobowe*100 }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>                        
+                <tr>
+                    <th>Koszt uzyskania przychodu</th>
+                    <td>{{ object.kosztUzyskaniaPrzychodu }}</td>
+                </tr>
+                <tr>
+                    <th>Podatek dochodowy</th>
+                    <td>{{ object.podatekDochodowy*100 }}</td>
+                </tr>
+                <tr>
+                    <th>Ulga podatkowa</th>
+                    <td>{{ object.ulgaPodatkowa }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>                
+                <tr>
+                    <td colspan="2" class="separator">Ubezpieczenie zdrowotne</td>
+                </tr>
+                <tr>
+                    <th>Ubezpieczenie zdrowotne</th>
+                    <td>{{ object.ubezpieczenieZdrowotne*100 }}</td>
+                </tr>
+                <tr>
+                    <th>Ubezpieczenie zdrowotne</th>
+                    <td>{{ object.ubezpieczenieZdrowotne2*100 }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>Ewentualne potrącenia</th>
+                    <td>{{ object.ewentualnePotracenia }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>                
+                <tr>
+                    <td colspan="2" class="separator">Składki pracodawcy</td>
+                </tr>
+                <tr>
+                    <th>Ubezpieczenie Emerytalne</th>
+                    <td>{{ object.puEmerytalne*100 }}</td>
+                </tr>
+                <tr>
+                    <th>Ubezpieczenie Rentowe</th>
+                    <td>{{ object.puRentowe*100 }}</td>
+                </tr>
+                <tr>
+                    <th>Ubezpieczenie Wypadkowe</th>
+                    <td>{{ object.puWypadkowe*100 }}</td>
+                </tr>
+                <tr>
+                    <th>Fundusz Pracy</th>
+                    <td>{{ object.funduszPracy*100 }}</td>
+                </tr>
+                <tr>
+                    <th>Fgsp</th>
+                    <td>{{ object.fgsp*100 }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>Koszt Pracodawcy</th>
+                    <td>{{ object.kosztPracodawcy }} zł</td>
+                </tr>
+
+            </table>
+    </div>
+{% endblock %}
+{% block stylesheets %}
+{{ parent() }}
+<style type="text/css">
+table.table
+{
+    width: 600px !important;
+}
+
+th
+{
+    width: 300px;
+}
+{#
+td:last-child
+{
+    width: 300px;
+}
+#}
+
+td.separator
+{
+    text-align: center !important;
+}
+</style>
+{% endblock stylesheets %}

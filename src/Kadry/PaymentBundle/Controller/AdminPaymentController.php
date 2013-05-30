@@ -262,5 +262,28 @@ class AdminPaymentController extends CRUDController
             'form'   => $view,
             'object' => $object,
         ));
-    }    
+    }
+    
+    public function detailsAction($id = null)
+    {
+        $id = $this->get('request')->get($this->admin->getIdParameter());
+
+        $object = $this->admin->getObject($id);
+
+        if (!$object) {
+            throw new NotFoundHttpException(sprintf('unable to find the object with id : %s', $id));
+        }
+
+        if (false === $this->admin->isGranted('VIEW', $object)) {
+            throw new AccessDeniedException();
+        }
+
+        $this->admin->setSubject($object);
+
+        return $this->render("KadryPaymentBundle:AdminPayment:show.html.twig", array(
+            'action'   => 'show',
+            'object'   => $object,
+            'elements' => $this->admin->getShow(),
+        ));
+    }
 }

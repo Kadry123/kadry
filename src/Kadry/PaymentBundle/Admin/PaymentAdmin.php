@@ -7,13 +7,16 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Kadry\PaymentBundle\Entity\Payment;
+use Kadry\PaymentBundle\Entity\Contract;
 use Sonata\AdminBundle\Route\RouteCollection;
 
 class PaymentAdmin extends Admin
 {
     protected function configureRoutes(RouteCollection $collection)
     {
+        $collection->add('details', '/details/{id}');
         $collection->remove('edit');
+        $collection->remove('view');
     }    
         
     protected function configureFormFields(FormMapper $formMapper)
@@ -42,7 +45,7 @@ class PaymentAdmin extends Admin
                                             ->addOrderBy('u.lastName', 'ASC')
                                                     ;
                                         }
-                    ))
+                    ))                                      
         ;
     }
     
@@ -71,6 +74,17 @@ class PaymentAdmin extends Admin
             ->add('created', null, array(
                 'label' => 'Data wystawienia'
             ))
+            ->add('_action', 'actions', array(
+                'actions' => array(
+                    'detail' => array(
+                        'template' => 'KadryPaymentBundle:AdminPayment:list__action_view.html.twig',
+                        'label' => 'Szczegóły'
+                    ),
+//                        'view' => array(),
+//                        'edit' => array(),
+//                        'delete' => array()
+                )
+            ))                    
         ;
     }
 }
