@@ -4,6 +4,8 @@
 <<<<<<< HEAD
     <system systemId="http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd" uri="symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd"/>
 =======
-    <system systemId="http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd" uri="raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd"/>
+    
 >>>>>>> e0799c6ddfb648bed758509022f0cd5d9941bce8
+
+    <system systemId="http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd" uri="raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd"/>
 </catalog>

@@ -49,12 +49,15 @@ class User extends BaseUser
     
     protected $payment;    
     
+    protected $leave;
+    
     public function __construct()
     {
         parent::__construct();
         $this->startDate = new \DateTime();
         $this->employmentHistory = new ArrayCollection();
         $this->employeesHasEducation = new ArrayCollection();
+        $this->leave = new ArrayCollection();
     }
     
     public function getFirstName() {
@@ -149,6 +152,15 @@ class User extends BaseUser
         foreach($employeesHasEducation as $education){
             $education->setUser($this);
         }
+    }
+    
+    public function addLeave(Leave $leave){
+        $this->leave[] = $leave;
+        $leave->setUser($this);
+    }
+    
+    public function getLeave(){
+        return $this->leave;
     }
     
     public function getContract() {
