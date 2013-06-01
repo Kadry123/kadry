@@ -12,6 +12,13 @@
             <argument>KadryUserBundle:AdminUser</argument>
         </service>
         
+        <service id="admin.leave" class="Kadry\UserBundle\Admin\LeaveAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Urlopy"/>
+            <argument />
+            <argument>Kadry\UserBundle\Entity\Leave</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        
         <service id="admin.group" class="Kadry\UserBundle\Admin\GroupAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Grupy"/>
             <argument />
@@ -20,14 +27,14 @@
         </service>
         
         <service id="admin.document" class="Kadry\UserBundle\Admin\DocumentAdmin">
-            <tag name="sonata.admin" manager_type="orm" group="Dokumenty" label="Dokumenty"/>
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Dokumenty"/>
             <argument />
             <argument>Kadry\UserBundle\Entity\Document</argument>
             <argument>SonataAdminBundle:CRUD</argument>
         </service>
         
         <service id="admin.employment.history" class="Kadry\UserBundle\Admin\EmploymentHistoryAdmin">
-            <tag name="sonata.admin" manager_type="orm" group="Doswiadczenie" label="Doswiadczenie"/>
+            <tag name="sonata.admin" manager_type="orm" group="Pracownicy" label="Doswiadczenie"/>
             <argument />
             <argument>Kadry\UserBundle\Entity\EmploymentHistory</argument>
             <argument>SonataAdminBundle:CRUD</argument>

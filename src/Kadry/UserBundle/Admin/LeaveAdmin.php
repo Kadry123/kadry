@@ -18,7 +18,7 @@ class LeaveAdmin extends Admin
             ->add('dateTo', null, array(
                 'label' => 'Do'
             ))
-            ->add('position', null, array(
+            ->add('hoursNumber', null, array(
                 'label' => 'Ilość godzin'
             ))
         ;
